@@ -30,6 +30,14 @@ public class UI {
 	public static final String ANSI_CYAN_BLAGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BLAGROUND = "\u001B[47m";
 	
+	
+	// Para limpar o terminal
+	// https://stackoverflow.com/questions/2979383/java-clear-the-console
+	public static void clearScreen() {
+		System.out.println("\033[H\033[2j");
+		System.out.flush();
+	}
+	
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
 			String s = sc.nextLine();
